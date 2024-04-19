@@ -1,0 +1,17 @@
+*{
+    font-family: "Poppins", sans-serif; 
+}
+.SearchBox{
+    align-items: center;
+    margin-bottom: 25px
+}
+.InfoBox{
+    padding: 25px;
+    align-items: center;
+}
+.Information{
+    padding: 25px;
+}
+.Img-InfoBox{
+    height: 200px;
+}
