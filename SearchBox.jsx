@@ -10,13 +10,13 @@ export default function SearchBox({updateInfo}){
     const API_URL = "https://api.openweathermap.org/data/2.5/weather";
     const API_KEY = "79ac4fc83a387fe54acd7971aeb3d442";
 
-    let getWeatherInfo = async( ) =>{
+   let getWeatherInfo = async( ) =>  
+    {
       let response= 
        await 
             fetch(`${API_URL}?q=${city}&appid=${API_KEY}`
          );
-      let jsonResponse= 
-      await response.json();
+      let jsonResponse=  await response.json();
       console.log(jsonResponse);
       let result = {
         city:city,
@@ -26,13 +26,11 @@ export default function SearchBox({updateInfo}){
         humidity : jsonResponse.main.humidity,
         feelslike: jsonResponse.main.feelsLike,
         weather : jsonResponse.weather[0].description,
-
-        
       };
       console.log(result);
       return result;
     }
-     }
+     
 
     
     
@@ -50,7 +48,8 @@ export default function SearchBox({updateInfo}){
         updateInfo(newInfo);
       }catch (error){
         setError(true);
-      }
+      } }
+    
       
 
     return (
